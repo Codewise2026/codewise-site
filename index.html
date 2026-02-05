@@ -2,97 +2,210 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>CODEWISE Soluções Tecnológicas</title>
+<title>IVAN SANTOS LTDA | CODEWISE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-  font-family: Arial, sans-serif;
+:root {
+  --primary: #38bdf8;
+  --dark: #020617;
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #0f172a;
-  color: #e5e7eb;
+  padding: 0;
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(2,6,23,.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+nav .logo {
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav .whats {
+  background: rgba(56,189,248,.15);
+  padding: 10px 18px;
+  border-radius: 30px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* HERO */
 header {
-  padding: 50px 20px;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(2,6,23,.85), rgba(2,6,23,.85)),
+    url("hero-codewise.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: #020617;
+  padding: 120px 20px 40px;
 }
-h1 {
-  color: #38bdf8;
+
+.hero {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 46px;
+  color: var(--primary);
   margin-bottom: 10px;
 }
-h2 {
-  color: #38bdf8;
+
+.hero h2 {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  margin-bottom: 25px;
 }
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 35px;
 }
-.card {
-  background: #020617;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 14px 24px;
-  background: #38bdf8;
-  color: #020617;
-  border-radius: 8px;
-  font-weight: bold;
+  padding: 16px 30px;
+  background: var(--primary);
+  color: var(--dark);
+  border-radius: 12px;
+  font-weight: 700;
   text-decoration: none;
+  box-shadow: 0 0 30px rgba(56,189,248,.4);
+  transition: transform .2s;
 }
-footer {
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+section h3 {
   text-align: center;
-  padding: 20px;
-  background: #020617;
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 50px;
+}
+
+/* ABOUT */
+.about {
+  text-align: center;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--dark);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,.4);
+}
+
+.card h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* CONTACT */
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--muted);
   font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>CODEWISE Soluções Tecnológicas</h1>
-  <p><strong>Tecnologia inteligente para impulsionar o seu negócio</strong></p>
-  <a class="btn" href="https://wa.me/5565999469049">Fale conosco no WhatsApp</a>
-</header>
+<nav>
+  <div class="logo">CODEWISE</div>
+  <ul>
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a class="whats" href="https://wa.me/5565999469049">(65) 99946-9049</a>
+</nav>
 
-<section>
-  <h2>Sobre a Empresa</h2>
-  <div class="card">
-    <p>
-      A CODEWISE Soluções Tecnológicas atua com consultoria em Tecnologia da Informação,
-      suporte técnico, desenvolvimento de sistemas sob medida e treinamentos em informática,
-      ajudando empresas a crescerem com tecnologia segura, eficiente e moderna.
-    </p>
-  </div>
-
-  <h2>Serviços</h2>
-  <div class="card">
-    <ul>
-      <li>Consultoria em Tecnologia da Informação</li>
-      <li>Suporte técnico e manutenção em TI</li>
-      <li>Desenvolvimento de sistemas personalizados</li>
-      <li>Treinamento em informática</li>
-    </ul>
-  </div>
-
-  <h2>Contato</h2>
-  <div class="card">
-    <p>📞 (65) 99946-9049</p>
-    <p>📧 direcao.codewise@gmail.com</p>
-    <p>📍 Dom Aquino – MT</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 CODEWISE Soluções Tecnológicas</p>
-  <p>CNPJ: 63.474.552/0001-51</p>
-</footer>
-
-</body>
-</html>
+<header id="inicio">
+  <div class=
