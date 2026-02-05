@@ -16,11 +16,7 @@
   --muted: #94a3b8;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: 'Inter', sans-serif;
@@ -37,131 +33,49 @@ nav {
   background: rgba(2,6,23,.7);
   backdrop-filter: blur(8px);
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 15px 40px;
 }
 
-nav .logo {
-  font-weight: 700;
-  color: var(--primary);
-  letter-spacing: 1px;
-}
-
-nav ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-}
-
-nav ul li a {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav .whats {
-  background: rgba(56,189,248,.15);
-  padding: 10px 18px;
-  border-radius: 30px;
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
-}
+nav .logo { color: var(--primary); font-weight: 700; }
 
 /* HERO */
 header {
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(2,6,23,.85), rgba(2,6,23,.85)),
-    url("hero-codewise.png") center/cover no-repeat;
+  background: linear-gradient(rgba(2,6,23,.85), rgba(2,6,23,.85));
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 120px 20px 40px;
+  padding-top: 100px;
 }
 
-.hero h1 {
-  font-size: 46px;
-  color: var(--primary);
-}
-
-.hero h2 {
-  font-size: 14px;
-  letter-spacing: 4px;
-  color: var(--muted);
-  margin: 15px 0;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 35px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 16px 30px;
-  background: var(--primary);
-  color: var(--dark);
-  border-radius: 12px;
-  font-weight: 700;
-  text-decoration: none;
-}
+.hero h1 { font-size: 46px; color: var(--primary); }
 
 /* SECTIONS */
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
-}
+section { max-width: 1100px; margin: auto; padding: 80px 20px; }
 
-section h3 {
-  text-align: center;
-  font-size: 32px;
-  color: var(--primary);
-  margin-bottom: 50px;
-}
-
-/* SERVICES */
-.services, .contact {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background: var(--dark);
-  padding: 30px;
-  border-radius: 16px;
-}
+h3 { text-align: center; color: var(--primary); margin-bottom: 40px; }
 
 /* INSIGHTS */
 .insights {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 25px;
 }
 
 .insight {
   background: rgba(56,189,248,.15);
-  padding: 30px;
+  padding: 25px;
   border-radius: 16px;
   text-align: center;
 }
 
 .insight span {
-  font-size: 36px;
-  color: var(--primary);
+  display: block;
+  font-size: 28px;
   font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  background: var(--dark);
-  text-align: center;
-  padding: 30px;
-  color: var(--muted);
+  color: var(--primary);
 }
 
 /* CHAT */
@@ -170,12 +84,11 @@ footer {
   bottom: 20px;
   right: 20px;
   background: var(--primary);
-  color: var(--dark);
   border: none;
-  padding: 14px;
   border-radius: 50%;
+  padding: 15px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 #chatBox {
@@ -183,111 +96,101 @@ footer {
   position: fixed;
   bottom: 90px;
   right: 20px;
-  width: 300px;
   background: var(--dark);
   padding: 20px;
   border-radius: 16px;
-}
-
-#chatBox textarea {
-  width: 100%;
-  height: 80px;
-  margin-bottom: 10px;
-}
-
-#chatBox button {
-  width: 100%;
-  padding: 10px;
-  background: var(--primary);
-  border: none;
-  cursor: pointer;
+  width: 280px;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">CODEWISE</div>
-  <ul>
-    <li><a href="#inicio">Início</a></li>
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-  <a class="whats" href="https://wa.me/5565999469049">WhatsApp</a>
-</nav>
-
-<header id="inicio">
+<header>
   <div class="hero">
-    <h1>IVAN SANTOS LTDA</h1>
-    <h2>CODEWISE SOLUÇÕES TECNOLÓGICAS</h2>
-    <p>Tecnologia inteligente para impulsionar o seu negócio</p>
-    <a class="btn" href="https://wa.me/5565999469049">Fale conosco</a>
+    <h1>CODEWISE</h1>
+    <p>Soluções Tecnológicas Inteligentes</p>
   </div>
 </header>
 
 <section>
-  <h3>📊 Insights</h3>
+  <h3>📊 Painel de Informações</h3>
+
   <div class="insights">
     <div class="insight">
       <span id="visitas">0</span>
-      <p>Visitas no site</p>
+      Visitas
+    </div>
+
+    <div class="insight">
+      <span id="hora">--:--</span>
+      Hora Atual
+    </div>
+
+    <div class="insight">
+      <span id="temp">-- °C</span>
+      Temperatura
+    </div>
+
+    <div class="insight">
+      <span id="dolar">R$ --</span>
+      Dólar
+    </div>
+
+    <div class="insight">
+      <span id="euro">R$ --</span>
+      Euro
     </div>
   </div>
 </section>
 
-<section id="servicos">
-  <h3>Nossos Serviços</h3>
-  <div class="services">
-    <div class="card"><h4>Consultoria em TI</h4></div>
-    <div class="card"><h4>Suporte Técnico</h4></div>
-    <div class="card"><h4>Desenvolvimento de Sistemas</h4></div>
-    <div class="card"><h4>Treinamentos</h4></div>
-  </div>
-</section>
-
-<section id="contato">
-  <h3>Contato</h3>
-  <div class="contact">
-    <div class="card">📞 (65) 99946-9047</div>
-    <div class="card">📧 direcao.codewise@gmail.com</div>
-    <div class="card">📍 Dom Aquino – MT</div>
-  </div>
-</section>
-
-<footer>
-  © 2026 CODEWISE Soluções Tecnológicas
-</footer>
-
-<!-- CHAT -->
 <button id="chatBtn">💬</button>
 
 <div id="chatBox">
-  <h4>Perguntas ou Sugestões</h4>
-  <textarea placeholder="Digite aqui..."></textarea>
+  <textarea placeholder="Pergunta ou sugestão..."></textarea>
   <button onclick="enviar()">Enviar</button>
 </div>
 
 <script>
-/* CHAT */
-const chatBtn = document.getElementById("chatBtn");
-const chatBox = document.getElementById("chatBox");
-
-chatBtn.onclick = () => {
-  chatBox.style.display = chatBox.style.display === "block" ? "none" : "block";
-};
-
-function enviar() {
-  alert("Mensagem enviada com sucesso!");
-  chatBox.style.display = "none";
-}
-
 /* VISITAS */
 let visitas = localStorage.getItem("visitas");
 visitas = visitas ? Number(visitas) + 1 : 1;
 localStorage.setItem("visitas", visitas);
 document.getElementById("visitas").innerText = visitas;
+
+/* HORA */
+function atualizarHora(){
+  const agora = new Date();
+  document.getElementById("hora").innerText =
+    agora.toLocaleTimeString("pt-BR",{hour:'2-digit',minute:'2-digit'});
+}
+setInterval(atualizarHora,1000);
+atualizarHora();
+
+/* TEMPERATURA (Dom Aquino - MT) */
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Dom%20Aquino,BR&units=metric&lang=pt_br&appid=SUA_API_KEY_AQUI")
+.then(r=>r.json())
+.then(d=>{
+  document.getElementById("temp").innerText = Math.round(d.main.temp)+" °C";
+});
+
+/* COTAÇÃO */
+fetch("https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL")
+.then(r=>r.json())
+.then(d=>{
+  document.getElementById("dolar").innerText = "R$ " + Number(d.USDBRL.bid).toFixed(2);
+  document.getElementById("euro").innerText  = "R$ " + Number(d.EURBRL.bid).toFixed(2);
+});
+
+/* CHAT */
+const btn = document.getElementById("chatBtn");
+const box = document.getElementById("chatBox");
+
+btn.onclick = ()=> box.style.display = box.style.display==="block"?"none":"block";
+function enviar(){
+  alert("Mensagem enviada!");
+  box.style.display="none";
+}
 </script>
 
 </body>
